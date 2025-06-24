@@ -448,15 +448,6 @@ html,body{
    background-color: #000;
    color: gold 
 }
-.projet-content{
-   display: flex;
-   flex-direction: column; 
-   justify-content: center;
-   align-item: center; 
-   height: 100vh;
-   text-align: center;
-   padding: 20px
-}
 .projet-img {
 
   max-width: 90%;
@@ -466,6 +457,25 @@ html,body{
   margin-bottom: 20px;
 
 }
+
+
+
+/* Titre + texte */
+
+.projet-content p,
+
+.projet-content ul {
+
+  max-width: 600px;
+
+  font-size: 1.1rem;
+
+  line-height: 1.6;
+
+}
+
+
+
 
 
 
