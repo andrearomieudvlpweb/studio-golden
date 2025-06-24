@@ -480,10 +480,7 @@ html,body{
   font-size: 1.1rem;
 
   line-height: 1.6;
-
 }
-
-
 
 /* Lien retour */
 
@@ -506,6 +503,9 @@ html,body{
   transition: background 0.3s;
 
 }
-.pr
+.projet-header .back:hover {
+   background:gold;
+   color: black;
+}
 
 
