@@ -1,10 +1,17 @@
-/* Conteneur vertical principal */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Conteneur principal vertical */
 .vertical-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 30px;
   padding: 40px 20px;
   min-height: 100vh;
   background-color: #000;
@@ -12,21 +19,16 @@
   text-align: center;
 }
 
-/* Image principale (mock-up) */
-.vertical-page img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  border: 2px solid #FFD700;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+/* Titres */
+.vertical-page h1,
+.vertical-page h2 {
+  color: #FFD700;
+  margin-bottom: 10px;
 }
 
-/* Titres et sous-titres */
-.vertical-page h1,
-.vertical-page h2,
+/* Paragraphe */
 .vertical-page p {
-  margin: 0;
-  padding: 0 10px;
+  margin: 5px 0;
 }
 
 /* Bouton */
@@ -40,16 +42,25 @@
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
-  margin-top: 1em;
+  margin-top: 10px;
 }
 
 .vertical-page .btn:hover {
   background-color: #FFD700;
   color: #000;
-  box-shadow: 0 0 10px #FFD700;
 }
 
-/* Bloc de description */
+/* Image */
+.vertical-page img {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px 0;
+  border-radius: 10px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Description */
 .project-description {
   max-width: 800px;
   background-color: #111;
@@ -58,6 +69,7 @@
   border-top: 2px solid #FFD700;
   border-bottom: 2px solid #FFD700;
   text-align: left;
+  margin-bottom: 50px;
 }
 
 /* Footer */
@@ -67,6 +79,7 @@ footer.mentions {
   color: #aaa;
   border-top: 1px solid #FFD700;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: auto;
+  width: 100%;
+  background-color: #000;
 }
-
