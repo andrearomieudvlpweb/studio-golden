@@ -436,3 +436,76 @@ list-style: none;
 margin: 8px 0;
 font-size: 1em;
 }
+*{
+    margin: 0;
+   padding: 0; 
+   box-sizing: boder-box; 
+}
+
+html,body{
+   height:100%
+   font-familly: 'Playfair Display', serif;
+   background-color: #000;
+   color: gold 
+}
+.projet-content{
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-item: center; 
+   height: 100vh;
+   text-align: center;
+   padding: 20px
+}
+.projet-img {
+
+  max-width: 90%;
+
+  height: auto;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+/* Titre + texte */
+
+.projet-content p,
+
+.projet-content ul {
+
+  max-width: 600px;
+
+  font-size: 1.1rem;
+
+  line-height: 1.6;
+
+}
+
+
+
+/* Lien retour */
+
+.projet-header .back {
+
+  display: inline-block;
+
+  padding: 10px 15px;
+
+  margin: 20px;
+
+  text-decoration: none;
+
+  color: gold;
+
+  border: 1px solid gold;
+
+  border-radius: 4px;
+
+  transition: background 0.3s;
+
+}
+.pr
+
+
