@@ -1,1 +1,72 @@
+/* Conteneur vertical principal */
+.vertical-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+  text-align: center;
+}
+
+/* Image principale (mock-up) */
+.vertical-page img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Titres et sous-titres */
+.vertical-page h1,
+.vertical-page h2,
+.vertical-page p {
+  margin: 0;
+  padding: 0 10px;
+}
+
+/* Bouton */
+.vertical-page .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  background-color: transparent;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1em;
+}
+
+.vertical-page .btn:hover {
+  background-color: #FFD700;
+  color: #000;
+  box-shadow: 0 0 10px #FFD700;
+}
+
+/* Bloc de description */
+.project-description {
+  max-width: 800px;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  border-top: 2px solid #FFD700;
+  border-bottom: 2px solid #FFD700;
+  text-align: left;
+}
+
+/* Footer */
+footer.mentions {
+  text-align: center;
+  font-size: 0.85em;
+  color: #aaa;
+  border-top: 1px solid #FFD700;
+  padding: 20px;
+  margin-top: 50px;
+}
 
