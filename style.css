@@ -279,9 +279,11 @@ body {
   background-color: #ffcc00;
 }
 
-<footer class="mentions">
+{
+   <footer class="mentions">
 <p>© 2025 Studio Golden — <a href="mentions-legales.html">Mentions légales</a></p>
 </footer>
+   }
 
 .mentions {
 text-align: center;
