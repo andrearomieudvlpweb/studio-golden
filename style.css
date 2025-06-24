@@ -76,6 +76,21 @@ background-color: #FFD700;
 color: #000;
 box-shadow: 0 0 10px #FFD700;
 }
+   .vertical-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 30px 20px;
+}
+
+.vertical-wrapper img {
+  max-width: 90%;
+  border-radius: 10px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
 
 
 /* Section Portfolio */
@@ -623,17 +638,6 @@ footer.mentions {
   border-top: 1px solid #FFD700;
   padding: 20px;
   margin-top: auto;
-}
-.page-vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 40px 20px;
-  min-height: 100vh;
-  background-color: #000;
-  color: white;
-  text-align: center;
 }
 
 .mockup-title {
