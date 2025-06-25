@@ -1,97 +1,61 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Boutique – Studio Golden</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Logo et navigation centrée -->
-  <header>
-    <div class="logo">SG</div>
-    <nav class="navbar">
-      <a href="index.html">accueil</a>
-      <a href="portfolio.html">portfolio</a>
-      <a href="a-propos.html">à propos</a>
-      <a href="contact.html">contact</a>
-      <a href="boutique.html" class="active">boutique</a>
-      <a id="open-cart">🛒</a>
-    </nav>
-  </header>
-
-  <!-- Produits -->
-  <main class="boutique">
-    <h1>Ma boutique</h1>
-    <div class="products">
-
-      <!-- Exemple de produit -->
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150" alt="Produit 1">
-        <h3>Logo pro</h3>
-        <p>Création d’un logo sur-mesure</p>
-        <span class="prix">49 €</span>
-        <button onclick="addToCart('Logo pro', 49)">Ajouter</button>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150" alt="Produit 2">
-        <h3>Identité visuelle</h3>
-        <p>Palette + typo + logo</p>
-        <span class="prix">89 €</span>
-        <button onclick="addToCart('Identité visuelle', 89)">Ajouter</button>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150" alt="Produit 3">
-        <h3>Site vitrine</h3>
-        <p>Un site complet pour vous présenter</p>
-        <span class="prix">149 €</span>
-        <button onclick="addToCart('Site vitrine', 149)">Ajouter</button>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150" alt="Produit 4">
-        <h3>Refonte site</h3>
-        <p>Modernisation de votre site</p>
-        <span class="prix">99 €</span>
-        <button onclick="addToCart('Refonte site', 99)">Ajouter</button>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150" alt="Produit 5">
-        <h3>Kit Instagram</h3>
-        <p>10 visuels cohérents et pros</p>
-        <span class="prix">29 €</span>
-        <button onclick="addToCart('Kit Instagram', 29)">Ajouter</button>
-      </div>
-
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150" alt="Produit 6">
-        <h3>Audit branding</h3>
-        <p>Analyse de votre image</p>
-        <span class="prix">39 €</span>
-        <button onclick="addToCart('Audit branding', 39)">Ajouter</button>
-      </div>
-
+<section class="boutique">
+  <h1>Ma boutique</h1>
+  <div class="cards-container">
+    <div class="card">
+      <h2>Logo Pro</h2>
+      <p>Création d’un logo sur mesure</p>
+      <span>49 €</span>
+      <button>Ajouter</button>
     </div>
-  </main>
+    <div class="card">
+      <h2>Identité Visuelle</h2>
+      <p>Palette + typo + logo</p>
+      <span>69 €</span>
+      <button>Ajouter</button>
+    </div>
+    <div class="card">
+      <h2>Site vitrine</h2>
+      <p>Un site complet pour vous présenter</p>
+      <span>149 €</span>
+      <button>Ajouter</button>
+    </div>
+    <div class="card">
+      <h2>Refonte site</h2>
+      <p>Modernisation de votre site</p>
+      <span>99 €</span>
+      <button>Ajouter</button>
+    </div>
+    <div class="card">
+      <h2>Kit Instagram</h2>
+      <p>10 visuels cohérents et pros</p>
+      <span>29 €</span>
+      <button>Ajouter</button>
+    </div>
+    <div class="card">
+      <h2>Audit branding</h2>
+      <p>Analyse de votre image</p>
+      <span>39 €</span>
+      <button>Ajouter</button>
+    </div>
+  </div>
+</section>
 
-  <!-- Panier -->
-  <aside id="cart" class="cart">
-    <h2>Votre panier</h2>
-    <ul id="cart-items"></ul>
-    <p>Total : <span id="cart-total">0</span> €</p>
-    <button onclick="clearCart()">Vider
- le panier</button>
-  </aside>
-
-  <script src="script.js"></script>
-</body>
-</html>
 
 
+<div class="card">
+  <h2>Logo Pro</h2>
+  <p>Création d’un logo sur mesure</p>
+  <span>49 €</span>
+  <button class="ajouter-panier" data-nom="Logo Pro" data-prix="49">Ajouter</button>
+</div>
+<!-- Répète pour les autres cartes avec nom/prix différents -->
 
+<!-- Panier -->
+<div id="panier">
+  <h2>🛒 Votre panier</h2>
+  <ul id="liste-panier"></ul>
+  <p>Total : <span id="total">0</span> €</p>
+  <button id="vider-panier">Vider le panier</button>
+</div>
 
 
