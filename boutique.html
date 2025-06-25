@@ -2,172 +2,92 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio - Studio Golden</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-    }
-
-    /* Logo centré */
-    .logo {
-      display: block;
-      margin: 20px auto 5px;
-      width: 80px;
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 10px 0;
-      background-color: #0d0d0d;
-      border-top: 1px solid gold;
-      border-bottom: 1px solid gold;
-    }
-
-    nav a {
-      color: gold;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Titre principal */
-    h2 {
-      text-align: center;
-      color: gold;
-      margin: 40px 0 20px;
-    }
-
-    /* Section des cartes */
-    .cards {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      padding: 0 20px 60px;
-    }
-
-    .card {
-      background-color: #1a1a1a;
-      border: 2px solid gold;
-      border-radius: 10px;
-      width: 300px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px gold;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin: 15px 0;
-    }
-
-    .card h3 {
-      color: gold;
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 0.95em;
-      margin-bottom: 15px;
-    }
-
-    .btn {
-      background-color: gold;
-      color: black;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background-color: #ffd700;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #0d0d0d;
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid gold;
-      font-size: 0.9em;
-      color: #ccc;
-    }
-
-    footer a {
-      color: gold;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique – Studio Golden</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="boutique.css">
 </head>
 <body>
 
-  <!-- Logo -->
-  <img src="G (3).png" alt="Studio Golden" class="logo">
-
   <!-- Menu -->
-  <nav>
-    <a href="index.html" class="btn">accueil</a> 
-    <a href="portfolio.html" class="btn">portfolio</a>
-    <a href="apropos.html" class="btn">A propos</a>
-    <a href="contact.html" class="btn">Contact</a>
-    <a href="boutique.html" class="btn">Boutique</a>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <div class="logo">SG</div>
+      <ul class="nav-links">
+        <li><a href="index.html">accueil</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="a-propos.html">à propos</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="boutique.html" class="active">boutique</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Titre -->
-  <h2>Mes services</h2>
+  <main class="boutique">
+    <h1 class="titre-boutique">Ma boutique</h1>
 
-  <!-- Cartes -->
-  <div class="cards">
-    <div class="card">
-      <h3>Création de sites web</h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>Sites modernes, responsives et optimisés SEO.</p>
-      <a href="projet1.html" class="btn">Ajoutée</a>
-    </div>
+    <!-- Section produits -->
+    <section class="products">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x150" alt="Produit 1">
+        <h3>Logo professionnel</h3>
+        <p>Création de logo unique pour votre marque</p>
+        <span class="prix">49 €</span>
+        <div class="btn">Ajouter au panier</div>
+      </div>
 
-    <div class="card">
-      <h3>logo</h3>
-      <img src="mockup2.png" alt="Mockup app web">
-      <p>Apps dynamiques avec JavaScript, animations et interactions UX/UI.</p>
-      <a href="projet2.html" class="btn">Voir le projet</a>
-    </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x150" alt="Produit 2">
+        <h3>Identité visuelle</h3>
+        <p>Palette couleurs + typographie + logo</p>
+        <span class="prix">89 €</span>
+        <div class="btn">Ajouter au panier</div>
+      </div>
 
-    <div class="card">
-      <h3>business card</h3>
-      <img src="mockup3.png" alt="Mockup refonte">
-      <p>Amélioration de sites existants : performance, design, SEO, UX.</p>
-      <a href="projet3.html" class="btn">Voir le projet</a>
-    </div>
-  </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x150" alt="Produit 3">
+        <h3>Refonte site web</h3>
+        <p>Amélioration du design et structure</p>
+        <span class="prix">129 €</span>
+        <div class="btn">Ajouter au panier</div>
+      </div>
 
-  <!-- Footer -->
-  <footer>
-    <p><a href="mentions-legales.html">Mentions légales</a> – © Studio Golden 2025</p>
-  </footer>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x150" alt="Produit 4">
+        <h3>Template Instagram</h3>
+        <p>10 modèles prêts à l’emploi</p>
+        <span class="prix">29 €</span>
+        <div class="btn">Ajouter au panier</div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x150" alt="Produit 5">
+        <h3>Audit visuel</h3>
+        <p>Analyse de ton branding + recommandations</p>
+        <span class="prix">39 €</span>
+        <div class="btn">Ajouter au panier</div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/250x150" alt="Produit 6">
+        <h3>Kit de lancement</h3>
+        <p>Logo + visuels réseaux + charte express</p>
+        <span class="prix">99 €</span>
+        <div class="btn">Ajouter au panier</div>
+      </div>
+    </section>
+
+    <!-- Panier fictif -->
+    <section class="panier">
+      <h2>Panier (exemple)</h2>
+      <ul>
+        <li>Logo professionnel – 49 €</li>
+        <li>Template Instagram – 29 €</li>
+      </ul>
+      <p class="total">Total : 78 €</p>
+      <p style="font-size: 14px; opacity: 0.7;">(Ce panier est un exemple visuel statique)</p>
+    </section>
+  </main>
 
 </body>
 </html>
-
