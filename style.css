@@ -80,91 +80,95 @@ body {
 /* -----------------------
    PORTFOLIO : portfolio.html
 ----------------------- */
+/* Section principale */
 .portfolio {
-  padding: 4rem 2rem;
+  padding: 50px 20px;
   text-align: center;
-  color: #fff;
 }
 
+/* Titre h2 */
 .portfolio h2 {
-  font-size: 2.5rem;
-  color: #FFD700;
-  margin-bottom: 3rem;
-  font-family: 'Cinzel', serif;
+  font-size: 2em;
+  color: gold;
+  margin-bottom: 40px;
 }
 
-/* Cartes de projet */
+/* Conteneur de toutes les cartes */
 .cards {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-@media screen and (min-width: 768px) {
-  .cards {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
+/* Carte */
 .card {
-  background: rgba(255, 215, 0, 0.05);
-  border: 1px solid #FFD700;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 90%;
-  max-width: 300px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  background-color: #1a1a1a;
+  border: 2px solid gold;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
 }
 
-.card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #FFD700;
-  font-family: 'Cinzel', serif;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #ccc;
-  line-height: 1.5;
-}
-
-.mockup {
+/* Image mockup */
+.card img.mockup {
   width: 100%;
+  height: auto;
   border-radius: 8px;
-  margin: 10px 0;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-  transition: transform 0.3s ease;
+  margin-bottom: 15px;
 }
 
-.mockup:hover {
-  transform: scale(1.03);
+/* Titre dans les cartes */
+.card h3 {
+  color: gold;
+  font-size: 1.3em;
+  margin-bottom: 10px;
 }
 
+/* Texte dans les cartes */
+.card p {
+  color: #ccc;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+
+/* Bouton "Voir le projet" */
 .btn-card {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  border: 1px solid #FFD700;
-  color: #FFD700;
+  background-color: gold;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .btn-card:hover {
-  background: #FFD700;
-  color: #111;
+  background-color: #ffd700;
+  color: #000;
 }
+
+/* Responsive mobile */
+@media screen and (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
 /* -----------------------------------
    NAVIGATION RESPONSIVE
 ----------------------------------- */
