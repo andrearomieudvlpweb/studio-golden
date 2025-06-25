@@ -1,92 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Boutique – Studio Golden</title>
-  <link rel="stylesheet" href="boutique.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Menu -->
+  <!-- Logo et navigation centrée -->
   <header>
+    <div class="logo">SG</div>
     <nav class="navbar">
-      <div class="logo">SG</div>
-      <ul class="nav-links">
-        <li><a href="index.html">accueil</a></li>
-        <li><a href="portfolio.html">portfolio</a></li>
-        <li><a href="a-propos.html">à propos</a></li>
-        <li><a href="contact.html">contact</a></li>
-        <li><a href="boutique.html" class="active">boutique</a></li>
-      </ul>
+      <a href="index.html">accueil</a>
+      <a href="portfolio.html">portfolio</a>
+      <a href="a-propos.html">à propos</a>
+      <a href="contact.html">contact</a>
+      <a href="boutique.html" class="active">boutique</a>
+      <a id="open-cart">🛒</a>
     </nav>
   </header>
 
+  <!-- Produits -->
   <main class="boutique">
-    <h1 class="titre-boutique">Ma boutique</h1>
+    <h1>Ma boutique</h1>
+    <div class="products">
 
-    <!-- Section produits -->
-    <section class="products">
+      <!-- Exemple de produit -->
       <div class="product-card">
         <img src="https://via.placeholder.com/250x150" alt="Produit 1">
-        <h3>Logo professionnel</h3>
-        <p>Création de logo unique pour votre marque</p>
+        <h3>Logo pro</h3>
+        <p>Création d’un logo sur-mesure</p>
         <span class="prix">49 €</span>
-        <div class="btn">Ajouter au panier</div>
+        <button onclick="addToCart('Logo pro', 49)">Ajouter</button>
       </div>
 
       <div class="product-card">
         <img src="https://via.placeholder.com/250x150" alt="Produit 2">
         <h3>Identité visuelle</h3>
-        <p>Palette couleurs + typographie + logo</p>
+        <p>Palette + typo + logo</p>
         <span class="prix">89 €</span>
-        <div class="btn">Ajouter au panier</div>
+        <button onclick="addToCart('Identité visuelle', 89)">Ajouter</button>
       </div>
 
       <div class="product-card">
         <img src="https://via.placeholder.com/250x150" alt="Produit 3">
-        <h3>Refonte site web</h3>
-        <p>Amélioration du design et structure</p>
-        <span class="prix">129 €</span>
-        <div class="btn">Ajouter au panier</div>
+        <h3>Site vitrine</h3>
+        <p>Un site complet pour vous présenter</p>
+        <span class="prix">149 €</span>
+        <button onclick="addToCart('Site vitrine', 149)">Ajouter</button>
       </div>
 
       <div class="product-card">
         <img src="https://via.placeholder.com/250x150" alt="Produit 4">
-        <h3>Template Instagram</h3>
-        <p>10 modèles prêts à l’emploi</p>
-        <span class="prix">29 €</span>
-        <div class="btn">Ajouter au panier</div>
+        <h3>Refonte site</h3>
+        <p>Modernisation de votre site</p>
+        <span class="prix">99 €</span>
+        <button onclick="addToCart('Refonte site', 99)">Ajouter</button>
       </div>
 
       <div class="product-card">
         <img src="https://via.placeholder.com/250x150" alt="Produit 5">
-        <h3>Audit visuel</h3>
-        <p>Analyse de ton branding + recommandations</p>
-        <span class="prix">39 €</span>
-        <div class="btn">Ajouter au panier</div>
+        <h3>Kit Instagram</h3>
+        <p>10 visuels cohérents et pros</p>
+        <span class="prix">29 €</span>
+        <button onclick="addToCart('Kit Instagram', 29)">Ajouter</button>
       </div>
 
       <div class="product-card">
         <img src="https://via.placeholder.com/250x150" alt="Produit 6">
-        <h3>Kit de lancement</h3>
-        <p>Logo + visuels réseaux + charte express</p>
-        <span class="prix">99 €</span>
-        <div class="btn">Ajouter au panier</div>
+        <h3>Audit branding</h3>
+        <p>Analyse de votre image</p>
+        <span class="prix">39 €</span>
+        <button onclick="addToCart('Audit branding', 39)">Ajouter</button>
       </div>
-    </section>
 
-    <!-- Panier fictif -->
-    <section class="panier">
-      <h2>Panier (exemple)</h2>
-      <ul>
-        <li>Logo professionnel – 49 €</li>
-        <li>Template Instagram – 29 €</li>
-      </ul>
-      <p class="total">Total : 78 €</p>
-      <p style="font-size: 14px; opacity: 0.7;">(Ce panier est un exemple visuel statique)</p>
-    </section>
+    </div>
   </main>
 
+  <!-- Panier -->
+  <aside id="cart" class="cart">
+    <h2>Votre panier</h2>
+    <ul id="cart-items"></ul>
+    <p>Total : <span id="cart-total">0</span> €</p>
+    <button onclick="clearCart()">Vider
+ le panier</button>
+  </aside>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
