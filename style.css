@@ -715,3 +715,74 @@ footer.mentions {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+body {
+  background-color: #000;
+  color: gold;
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* effet de scroll fluide */
+}
+
+.intro {
+  background-color: #000;
+  color: gold;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.studio-name {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.discover-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 1px solid gold;
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.discover-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: gold;
+  z-index: -1;
+  transition: left 0.5s ease;
+}
+
+.discover-btn:hover::after {
+  left: 0;
+}
+
+.discover-btn:hover {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
