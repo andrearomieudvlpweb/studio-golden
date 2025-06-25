@@ -147,7 +147,7 @@
       <img src="mockup1.png" alt="Mockup site web">
       <p>Site complet pour vous présenter </p>
       <p>149€</p>
-      <a href="panier.html" class="btn">Ajouter</a>
+      <button class=”ajouter” data-nom=”Site vitrine” data-prix=”149” >Ajouter</button>
     </div>
  
        <div class="card">
@@ -155,7 +155,7 @@
       <img src="mockup1.png" alt="Mockup site web">
       <p>10 Visuels cohérents et pros </p>
       <p>29€</p>
-      <a href="panier.html" class="btn">Ajouter</a>
+      <button class=”ajouter” data-nom="Kit instragram” data-prix=”29” >Ajouter</button>
     </div>
 
  <div class="card">
@@ -163,7 +163,7 @@
       <img src="mockup1.png" alt="Mockup site web">
       <p>Logo+typo+palette </p>
       <p>69€</p>
-      <a href="panier.html" class="btn">Ajouter</a>
+    <button class=”ajouter” data-nom=”Identité visuelle” data-prix=”69” >Ajouter</button>
     </div>
 
 
@@ -172,7 +172,7 @@
       <img src="mockup1.png" alt="Mockup site web">
       <p>Analyse de votre image </p>
       <p>39€</p>
-      <a href="panier.html" class="btn">Ajouter</a>
+     <button class=”ajouter” data-nom=”Audit Branding” data-prix=”39” >Ajouter</button>
     </div>
 
 
@@ -183,7 +183,7 @@
       <img src="mockup2.png" alt="Mockup app web">
       <p>Modernisation de votre </p>
       <p>99€</p>
-      <a href="panier.html" class="btn">Ajouter</a>
+      <button class=”ajouter” data-nom=”Refonte site” data-prix=”99” >Ajouter</button>
     </div>
 
     <div class="card">
@@ -191,7 +191,7 @@
       <img src="mockup3.png" alt="Mockup refonte">
       <p>Création d’un logo sur mesure</p>
       <p>49€</p>
-      <a href="panier.html" class="btn">Ajouter</a>
+      <button class=”ajouter” data-nom=”Logo Pro” data-prix=”49” >Ajouter</button>
     </div>
   </div>
 
@@ -199,6 +199,26 @@
   <footer>
     <p><a href="mentions-legales.html">Mentions légales</a> – © Studio Golden 2025</p>
   </footer>
+<!-- Fin de ton HTML boutique.html -->
+<script>
+  const boutons = document.querySelectorAll('.ajouter');
+
+  boutons.forEach(bouton => {
+    bouton.addEventListener('click', () => {
+      const nom = bouton.getAttribute('data-nom');
+      const prix = parseFloat(bouton.getAttribute('data-prix'));
+
+      let panier = JSON.parse(localStorage.getItem('panier')) || [];
+      panier.push({ nom, prix });
+      localStorage.setItem('panier', JSON.stringify(panier));
+
+      // Redirection vers le panier
+      window.location.href = "panier.html";
+    });
+  });
+</script>
+</body>
+</html>
 
 </body>
 </html>
