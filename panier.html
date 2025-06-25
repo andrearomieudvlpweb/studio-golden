@@ -46,35 +46,27 @@
 </head>
 <body>
 
-  <h1>🛒 Boutique simple</h1>
-
-  <div class="produit">
-    <p>Logo Pro — 49 €</p>
-    <button class="btn" onclick="ajouterProduit(49)">Ajouter</button>
-  </div>
-
-  <div class="produit">
-    <p>Identité Visuelle — 69 €</p>
-    <button class="btn" onclick="ajouterProduit(69)">Ajouter</button>
-  </div>
-
-  <div class="produit">
-    <p>Kit Instagram — 29 €</p>
-    <button class="btn" onclick="ajouterProduit(29)">Ajouter</button>
-  </div>
-
-  <div class="total">
-    Total : <span id="total">0</span> €
-  </div>
-
+  body>
+  <h1>Votre panier</h1>
+  <ul id="liste-panier"></ul>
+  <p>Total : <span id="total">0</span> €</p>
+  <button onclick="viderPanier()">Vider le panier</button>
   <script>
+    let panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const liste = document.getElementById('liste-panier');
+    const totalElement = document.getElementById('total');
     let total = 0;
-
-    function ajouterProduit(prix) {
-      total += prix;
-      document.getElementById("total").textContent = total.toFixed(2);
+    panier.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.nom} — ${item.prix} €`;
+      liste.appendChild(li);
+      total += item.prix;
+    });
+    totalElement.textContent = total.toFixed(2);
+    function viderPanier() {
+      localStorage.removeItem('panier');
+      location.reload();
     }
   </script>
-
 </body>
 </html>
