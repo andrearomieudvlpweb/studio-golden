@@ -7,7 +7,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body style="background-color: black; color: white; font-family: 'Playfair Display', serif; margin: 0; padding: 40px 20px; text-align: center;">
-  <img src="G.png" alt="Mock-up site" style="max-width: 300px; width: 100%; border: 2px solid #FFD700; border-radius: 10px; box-shadow: 0 0 20px ; margin: 30px auto; display: block;">
+ <style>
+    .logo-container{ 
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      height: 100vh 
+      background: transparent 
+    }
+   .animated-logo{ 
+     width: 180px; 
+     opacity: 0; 
+     animation: fadeZoom 1.6s eas-out forwards; 
+   }
+    @keyframes fadeZoom{
+      0%{ 
+        transform: scale(0.7);
+        opacity: 0; 
+  }
+      60% {
+        transform: scale(1.1);
+        opacity: 0; 
+}
+      100% { 
+        transform: scale (1); 
+        opacity: 1;
+      }
+    }
+ </style>
+  <img src="G.png" alt="Mock-up site" style="max-width: 300px; width: 100%; border: 2px solid #FFD700; border-radius: 10px; box-shadow: 0 0 20px ; margin: 30px auto; display: block;">
   <h2 style="color: #FFD700; margin-top: 30px;">Studio GOLDEN </h2>
  
   <div style="max-width: 800px; margin: 0 auto; background-color: #111; padding: 30px; border-radius: 10px; border-top: 2px solid #FFD700; border-bottom: 2px solid #FFD700; text-align: left;">
