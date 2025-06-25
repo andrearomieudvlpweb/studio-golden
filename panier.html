@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Votre Panier</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="panier">
+    <h1>🛒 Votre panier</h1>
+    <ul id="liste-panier"></ul>
+    <p>Total : <span id="total">0</span> €</p>
+    <button id="vider-panier">Vider le panier</button>
+  </main>
+
+  <script>
+    let panier = JSON.parse(localStorage.getItem('panier')) || [];
+
+    const listePanier = document.getElementById('liste-panier');
+    const totalElement = document.getElementById('total');
+    const boutonVider = document.getElementById('vider-panier');
+
+    function afficherPanier() {
+      listePanier.innerHTML = '';
+      let total = 0;
+
+      panier.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.nom} - ${item.prix} €`;
+        listePanier.appendChild(li);
+        total += item.prix;
+      });
+
+      totalElement.textContent = total.toFixed(2);
+    }
+
+    boutonVider.addEventListener('click', () => {
+      localStorage.removeItem('panier');
+      panier = [];
+      afficherPanier();
+    });
+
+    afficherPanier();
+  </script>
+</body>
+</html>
+
+
+
