@@ -281,7 +281,27 @@ a:hover {
 body {
   padding-top: 70px;
 }
+nav { 
+   position: fixed; 
+   top: 0; 
+   width: 100%
+   background-color: #0d0d0d
+   z-index: 1000
+   padding: 10px 0 
+   display: flex
+   justify-content: center; 
+   gap: 30px; 
+   border  bottom: 1px solid gold; 
+}
 
+nav a { 
+   color: gold; 
+   text-decoration: none; 
+   font-weight: bold; 
+}
+body { 
+   padding-top: 70px; 
+   
 /* -----------------------
    FOOTER
 ----------------------- */
