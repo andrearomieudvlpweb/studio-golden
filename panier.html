@@ -2,57 +2,79 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Votre Panier</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <nav class="menu">
-      <a href="index.html">Accueil</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="boutique.html">Boutique</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="panier">
-    <h1>🛒 Votre panier</h1>
-    <ul id="liste-panier"></ul>
-    <p>Total : <span id="total">0</span> €</p>
-    <button id="vider-panier">Vider le panier</button>
-  </main>
-
-  <script>
-    let panier = JSON.parse(localStorage.getItem('panier')) || [];
-
-    const listePanier = document.getElementById('liste-panier');
-    const totalElement = document.getElementById('total');
-    const boutonVider = document.getElementById('vider-panier');
-
-    function afficherPanier() {
-      listePanier.innerHTML = '';
-      let total = 0;
-
-      panier.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.nom} - ${item.prix} €`;
-        listePanier.appendChild(li);
-        total += item.prix;
-      });
-
-      totalElement.textContent = total.toFixed(2);
+  <title>Panier simple</title>
+  <style>
+    body {
+      background-color: #000;
+      color: gold;
+      font-family: 'Poppins', sans-serif;
+      padding: 2rem;
+      text-align: center;
     }
 
-    boutonVider.addEventListener('click', () => {
-      localStorage.removeItem('panier');
-      panier = [];
-      afficherPanier();
-    });
+    .produit {
+      background-color: #111;
+      margin: 1rem auto;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 80%;
+      box-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
+    }
 
-    afficherPanier();
+    .btn {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #e6c200;
+    }
+
+    .total {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      border-top: 1px solid gold;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛒 Boutique simple</h1>
+
+  <div class="produit">
+    <p>Logo Pro — 49 €</p>
+    <button class="btn" onclick="ajouterProduit(49)">Ajouter</button>
+  </div>
+
+  <div class="produit">
+    <p>Identité Visuelle — 69 €</p>
+    <button class="btn" onclick="ajouterProduit(69)">Ajouter</button>
+  </div>
+
+  <div class="produit">
+    <p>Kit Instagram — 29 €</p>
+    <button class="btn" onclick="ajouterProduit(29)">Ajouter</button>
+  </div>
+
+  <div class="total">
+    Total : <span id="total">0</span> €
+  </div>
+
+  <script>
+    let total = 0;
+
+    function ajouterProduit(prix) {
+      total += prix;
+      document.getElementById("total").textContent = total.toFixed(2);
+    }
   </script>
+
 </body>
 </html>
-
-
-
