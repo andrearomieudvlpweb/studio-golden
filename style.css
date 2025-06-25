@@ -1,746 +1,35 @@
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-/* Fond */
-body {
-height: 70vh;
-background: #000000;
-font-family: 'Playfair Display', sans-serif;
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 20px;
-}
-
-/* Conteneur principal */
-.hero {
-text-align: centre;
-max-width: 600px;
-padding: 60px 20px;
-}
-
-.logo {
-width: 500px; /* augmente la taille */
-margin-bottom: -5cm ;
-filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.3)); /* glow doré */
-animation: fadeIn 2s ease-in-out;
-}
-
-/* Animation douce */
-@keyframes fadeIn {
-from { opacity: 0; transform: scale(0.8); }
-to { opacity: 1; transform: scale(1); }
-}
-
-/* Titre */
-h1 {
-font-size: 2.5rem;
-font-weight: 700;
-color: #ffffff;
-margin-bottom: 0 7em 0;
-}
-
-h1 .gold {
-color: #FFD700;
-}
-
-/* Sous-titre */
-.subtitle {
-font-size: 1.1rem;
-color: #ccc;
-line-height: 1.6;
-margin-bottom: 0.5em 0;
-}
-
-/* Bouton */
-.btn {
-display: inline-block;
-padding: 12px 25px;
-border: 2px solid #FFD700;
-color: #FFD700;
-background-color: transparent;
-border-radius: 30px;
-font-weight: bold;
-text-decoration: none;
-transition: all 0.3s ease;
-margin-top: 1em
-}
-
-.btn:hover {
-background-color: #FFD700;
-color: #000;
-box-shadow: 0 0 10px #FFD700;
-}
-   .vertical-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
-  padding: 30px 20px;
-}
-
-.vertical-wrapper img {
-  max-width: 90%;
-  border-radius: 10px;
-  border: 2px solid #FFD700;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-}
-
-
-/* Section Portfolio */
-.portfolio {
-padding: 4rem 2rem;
-text-align: center;
-color: #fff;
-}
-
-.logo {
-width: 200px; /* augmente la taille */
-margin-bottom: 0cm ;
-}
-
-.portfolio h2 {
-font-size: 2.5rem;
-color: #FFD700;
-margin-bottom: 3rem;
-font-family: 'Cinzel', serif;
-}
-
-/* Cartes */
-.cards {
-display: flex;
-flex-direction: column;
-gap: 2rem;
-align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-.cards {
-flex-direction: row;
-justify-content: center;
-}
-}
-
-.card {
-background: rgba(255, 215, 0, 0.05);
-border: 1px solid #FFD700;
-border-radius: 10px;
-padding: 2rem;
-width: 90%;
-max-width: 300px;
-box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-transform: translateY(-10px);
-box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-}
-
-.card h3 {
-font-size: 1.3rem;
-margin-bottom: 1rem;
-color: #FFD700;
-font-family: 'Cinzel', serif;
-}
-
-.card p {
-font-size: 0.95rem;
-color: #ccc;
-line-height: 1.5;
-}
-
-.mockup {
-width: 100%;
-max-width: 300px;
-border-radius: 8px;
-margin: 10px 0;
-box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-transition: transform 0.3s ease;
-}
-
-.mockup:hover {
-transform: scale(1.03);
-}
-
-.card {
-   text-align: center;
-}
-.btn-card {
-display: inline-block;
-margin-top: 10px;
-padding: 8px 16px;
-border: 1px solid #FFD700;
-color: #FFD700;
-text-decoration: none;
-border-radius: 5px;
-transition: background 0.3s;
-}
-.btn-card:hover {
-background: #FFD700;
-color: #111;
-}
-
-.card:hover {
-transform: scale(1.03);
-box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-}
-
-<div class="filters">
-<button class="filter">Tous</button>
-<button class="filter">Sites web</button>
-<button class="filter">Apps</button>
-<button class="filter">Refontes</button>
-</div>
-.header {
-position: fixed;
-top: 0;
-width: 100%;
-background-color: #111;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 20px;
-z-index: 999;
-border-bottom: 1px solid #FFD700;
-}
-
-.logo-mini img {
-height: 30px;
-}
-
-.nav ul {
-list-style: none;
-display: flex;
-gap: 20px;
-}
-
-.nav a {
-color: #FFD700;
-text-decoration: none;
-font-weight: bold;
-font-size: 0.9em;
-}
-
-.nav a:hover {
-color: white;
-text-shadow: 0 0 5px #FFD700;
-}
-
-body {
-.projet-mockup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
-  background-color: #111;
-}
-
-.projet-mockup img {
-  max-width: 100%;
-  width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.projet-contact {
-  text-align: center;
-  background-color: #111;
-  color: white;
-  padding: 40px 20px;
-}
-
-.projet-contact h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.projet-contact p {
-  margin-bottom: 20px;
-}
-
-.projet-contact a {
-  background-color: gold;
-  color: #000;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.projet-contact a:hover {
-  background-color: #ffcc00;
-}
-
-{
-   <footer class="mentions">
-<p>© 2025 Studio Golden — <a href="mentions-legales.html">Mentions légales</a></p>
-</footer>
-   }
-
-.mentions {
-text-align: center;
-padding: 20px;
-font-size: 0.8em;
-color: #aaa;
-border-top: 1px solid #FFD700;
-margin-top: 50px;
-}
-
-.mentions a {
-color: #FFD700;
-text-decoration: none;
-}
-.mentions a:hover {
-text-decoration: underline;
-}
-
-html, body{
-
-   height:50%;
-   margin: 0;
-   padding: 0;
-   display: flex;
-   flex-direction: column;
-}
-.projet-header {
-text-align: center;
-color: #FFD700;
-margin-top: 40px;
-}
-
-.projet-content {
-max-width: 800px;
-margin: 0 auto;
-color: #fff;
-text-align: center;
-padding: 20px;
-}
-
-.projet-img {
-max-width: 100%;
-border: 1px solid #FFD700;
-margin-bottom: 20px;
-}
-
-.back {
-display: inline-block;
-color: #FFD700;
-text-decoration: none;
-margin-bottom: 20px;
-}
-
-/* Pour centrer et réduire le logo */
-.logo-top {
-text-align: center;
-margin-top: 20px;
-}
-.small-logo {
-width: 60px;
-height: auto;
-}
-
-* Réinitialisation de base */
+/* -----------------------
+   RESET & BASE
+----------------------- */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: 'Segoe UI', sans-serif;
-background-color: #0b0b0b;
-color: #ffffff;
-line-height: 1.6;
-padding: 20px;
-}
-
-
-
-/* Image du projet */
-.projet-image {
-display: block;
-margin: 0 auto 30px auto;
-max-width: 100%;
-height: auto;
-border: 2px solid #FFD700;
-border-radius: 10px;
-box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-}
-
-/* Objectif de la refonte */
-.project-objective {
-text-align: center;
-padding: 20px;
-background: #121212;
-border-top: 2px solid #FFD700;
-border-bottom: 2px solid #FFD700;
-margin-bottom: 40px;
-border-radius: 10px;
-}
-
-.project-objective h2 {
-color: #FFD700;
-font-size: 1.5em;
-margin-bottom: 15px;
-}
-
-.project-objective ul {
-list-style: none;
-padding-top: 10px;
-}
-
-.project-objective li {
-margin: 8px 0;
-font-size: 1em;
-}
-
-/* Footer */
-.mentions {
-text-align: center;
-font-size: 0.85em;
-color: #aaa;
-border-top: 1px solid #FFD700;
-padding: 20px;
-margin-top: 60px;
-}
-
-.mentions a {
-color: #FFD700;
-text-decoration: none;
-}
-
-.mentions a:hover {
-text-decoration: underline;
-}
-
-.logo-header {
-   display: block;
-   margin: 30px auto 20px
-   height: 60px;
-   filter: drop-shadow(0 0 5px #FFD700;
-}
-
-.projet-image{
-   display: block;
-   margin: 30px auto;
-   max-width: 600px;
-   width:100%
-   height: auto;
-   border: 2px solid #FFD700
-   border-radius: 10px;
-   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-}
-
-.project-objective {
-text-align: center;
-padding: 30px;
-margin-top: 30px;
-background-color: #111;
-border-top: 2px solid #FFD700;
-border-bottom: 2px solid #FFD700;
-border-radius: 10px;
-}
-
-.project-objective h2 {
-color: #FFD700;
-font-size: 1.5em;
-margin-bottom: 15px;
-}
-
-.project-objective li {
-list-style: none;
-margin: 8px 0;
-font-size: 1em;
-}
-*{
-    margin: 0;
-   padding: 0; 
-   box-sizing: boder-box; 
-}
-
-html,body{
-   height:100%
-   font-familly: 'Playfair Display', serif;
-   background-color: #000;
-   color: gold 
-}
-.projet-img {
-
-  max-width: 50%;
-
-  height: auto;
-
-  margin-bottom: 20px;
-
-}
-
-
-
-/* Titre + texte */
-
-.projet-content p,
-
-.projet-content ul {
-
-  max-width: 600px;
-
-  font-size: 1.1rem;
-
-  line-height: 1.6;
-
-}
-
-
-
-
-
-
-/* Titre + texte */
-
-.projet-content p,
-
-.projet-content ul {
-
-  max-width: 600px;
-
-  font-size: 1.1rem;
-
-  line-height: 1.6;
-}
-
-/* Lien retour */
-
-.projet-header .back {
-
-  display: inline-block;
-
-  padding: 10px 15px;
-
-  margin: 20px;
-
-  text-decoration: none;
-
-  color: gold;
-
-  border: 1px solid gold;
-
-  border-radius: 4px;
-
-  transition: background 0.3s;
-
-}
-.projet-header .back:hover {
-   background:gold;
-   color: black;
-}
-
-.projet-vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-  gap: 20px;
-  text-align: center;
-}
-
-.mockup-title {
-  font-size: 1.5rem;
-  color: #FFD700;
-  margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
-}
-
-.projet-image {
-  width: 90%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-  border: 2px solid #FFD700;
-}
-
-.project-description {
-  max-width: 800px;
-  color: white;
-  background-color: #111;
-  padding: 30px;
-  border-top: 2px solid #FFD700;
-  border-bottom: 2px solid #FFD700;
-  border-radius: 10px;
-  text-align: left;
-}
-
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
-}
-
-.projet-top {
-  text-align: center;
-  padding: 20px;
-  color: #FFD700;
-  font-family: 'Playfair Display', serif;
-}
-
-.projet-top p {
-  margin: 5px 0;
-}
-
-.projet-main {
-  padding: 30px 20px;
-  text-align: center;
-  color: white;
-}
-
-footer.mentions {
-  text-align: center;
-  font-size: 0.85em;
-  color: #aaa;
-  border-top: 1px solid #FFD700;
-  padding: 20px;
-  margin-top: auto;
-}
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
-}
-
-.projet-top {
-  text-align: center;
-  padding: 20px;
-  color: #FFD700;
-  font-family: 'Playfair Display', serif;
-}
-
-.projet-top p {
-  margin: 5px 0;
-}
-
-.projet-main {
-  padding: 30px 20px;
-  text-align: center;
-  color: white;
-}
-
-footer.mentions {
-  text-align: center;
-  font-size: 0.85em;
-  color: #aaa;
-  border-top: 1px solid #FFD700;
-  padding: 20px;
-  margin-top: auto;
-}
-
-.mockup-title {
-  font-size: 1.8rem;
-  color: #FFD700;
-  margin-bottom: 20px;
-}
-
-.projet-intro {
-  margin-bottom: 30px;
-}
-
-.projet-intro p {
-  margin: 5px 0;
-}
-
-.projet-intro h2 {
-  color: #FFD700;
-  margin-top: 15px;
-}
-
-.projet-image {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  border: 2px solid #FFD700;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-  margin-bottom: 30px;
-}
-
-.project-description {
-  max-width: 800px;
-  background-color: #111;
-  padding: 30px;
-  border-radius: 10px;
-  border-top: 2px solid #FFD700;
-  border-bottom: 2px solid #FFD700;
-  text-align: left;
-  margin-bottom: 50px;
-}
-
-.project-description ul {
-  list-style: none;
-  padding: 0;
-}
-
-.project-description li {
-  margin: 10px 0;
-  font-size: 1rem;
-}
-
-footer.mentions {
-  text-align: center;
-  font-size: 0.85em;
-  color: #aaa;
-  border-top: 1px solid #FFD700;
-  padding: 20px;
-}
-
-   .vertical-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
-  padding: 30px 20px;
-}
-
-.vertical-wrapper img {
-  max-width: 90%;
-  border-radius: 10px;
-  border: 2px solid #FFD700;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
-
-body {
-  background-color: #000;
-  color: gold;
-  font-family: 'Cinzel', serif;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth; /* effet de scroll fluide */
+  box-sizing: border-box;
 }
 
-.intro {
+body {
   background-color: #000;
-  color: gold;
+  color: #FFD700;
+  font-family: 'Playfair Display', serif;
+  scroll-behavior: smooth;
+}
+
+/* -----------------------
+   PAGE D'ACCUEIL : index.html
+----------------------- */
+.intro {
   text-align: center;
   padding: 100px 20px;
 }
 
 .logo {
-  width: 80px;
+  width: 100px;
   margin-bottom: 20px;
   animation: fadeIn 1s ease-in-out;
 }
 
 .studio-name {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-bottom: 30px;
   animation: fadeInUp 1.2s ease forwards;
 }
@@ -777,6 +66,7 @@ body {
   color: #000;
 }
 
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
@@ -786,3 +76,98 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* -----------------------
+   PORTFOLIO : portfolio.html
+----------------------- */
+.portfolio {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 3rem;
+  font-family: 'Cinzel', serif;
+}
+
+/* Cartes de projet */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.card {
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+  font-family: 'Cinzel', serif;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.mockup {
+  width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.mockup:hover {
+  transform: scale(1.03);
+}
+
+.btn-card {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: 1px solid #FFD700;
+  color: #FFD700;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-card:hover {
+  background: #FFD700;
+  color: #111;
+}
+
+/* -----------------------
+   FOOTER
+----------------------- */
+footer.mentions {
+  text-align
