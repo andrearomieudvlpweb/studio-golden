@@ -108,14 +108,14 @@ body {
   border: 2px solid gold;
   border-radius: 12px;
   padding: 20px;
-  width: 300px;
+  width: 90px;
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 0 15px gold;
 }
 
