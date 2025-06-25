@@ -1,0 +1,93 @@
+body {
+  background-color: #000;
+  color: gold;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.titre-boutique {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.product-card {
+  background-color: #111;
+  border: 1px solid gold;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  color: gold;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.prix {
+  display: block;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.btn {
+  background-color: gold;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: default;
+  margin-top: 0.5rem;
+}
+
+.panier {
+  background-color: #111;
+  border: 1px solid gold;
+  margin: 3rem auto;
+  max-width: 400px;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.panier h2 {
+  margin-bottom: 1rem;
+}
+
+.panier ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.panier li {
+  padding: 0.3rem 0;
+  color: white;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
