@@ -1,31 +1,35 @@
-et cart = [];
-const cartElement = document.getElementById('cart');
-const cartItems = document.getElementById('cart-items');
-const cartTotal = document.getElementById('cart-total');
-const cartButton = document.getElementById('open-cart');
+ const boutonsAjouter = document.querySelectorAll('.ajouter-panier');
+const listePanier = document.getElementById('liste-panier');
+const totalElement = document.getElementById('total');
+const boutonVider = document.getElementById('vider-panier');
 
-function addToCart(name, price) {
-  cart.push({ name, price });
-  updateCart();
-}
+let panier = [];
 
-function updateCart() {
-  cartItems.innerHTML = '';
-  let total = 0;
-  cart.forEach(item => {
-    const li = document.createElement('li');
-    li.textContent = `${item.name} - ${item.price} €`;
-    cartItems.appendChild(li);
-    total += item.price;
+boutonsAjouter.forEach(bouton => {
+  bouton.addEventListener('click', () => {
+    const nom = bouton.getAttribute('data-nom');
+    const prix = parseFloat(bouton.getAttribute('data-prix'));
+
+    panier.push({ nom, prix });
+    afficherPanier();
   });
-  cartTotal.textContent = total;
-}
-
-function clearCart() {
-  cart = [];
-  updateCart();
-}
-
-cartButton.addEventListener('click', () => {
-  cartElement.classList.toggle('active');
 });
+
+boutonVider.addEventListener('click', () => {
+  panier = [];
+  afficherPanier();
+});
+
+function afficherPanier() {
+  listePanier.innerHTML = '';
+  let total = 0;
+
+  panier.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.nom} - ${item.prix} €`;
+    listePanier.appendChild(li);
+    total += item.prix;
+  });
+
+  totalElement.textContent = total.toFixed(2);
+}
