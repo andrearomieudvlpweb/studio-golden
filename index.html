@@ -1,26 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-</head>
-<body style="background-color: black; color: white; font-family: 'Playfair Display', serif; margin: 0; padding: 40px 20px; text-align: center;">
-  <img src="G (5).png" alt="Logo Studio Golden" class="logo">
-  <h2 style="color: #FFD700; margin-top: 30px;">Studio GOLDEN </h2>
- 
-  <div style="max-width: 800px; margin: 0 auto; background-color: #111; padding: 30px; border-radius: 10px; border-top: 2px solid #FFD700; border-bottom: 2px solid #FFD700; text-align: left;">
-    <ul style="list-style: none; padding-left: 0;">
-     <li>Créativité haut de gamme pour marques ambitieuses.
-Développeuse junior passionnée par le design, le web moderne et l’expérience utilisateur</li>
-    </ul>
-  </div>
- <a href="portfolio.html" style="display:inline-block; margin: 20px auto; padding: 12px 25px; border: 2px solid #FFD700; color: #FFD700; text-decoration: none; border-radius: 30px; font-weight: bold;">Découvrir mon univers</a>
-  <footer style="margin-top: 40px; border-top: 1px solid #FFD700; padding-top: 20px; color: #aaa; font-size: 0.85em;">
-    © 2025 Studio Golden — <a href="mentions-legales.html" style="color: #FFD700; text-decoration: none;">Mentions légales</a>
-  </footer>
+  <meta charset="UTF-8">
+  <title>Studio GOLDEN - Intro</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #FFD700;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
 
+    .intro-container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slide-left {
+      transform: translateX(-100vw);
+      opacity: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      animation: slideDown 1.2s ease;
+    }
+
+    h1 span {
+      color: white;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      animation: fadeIn 3s ease-in;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      border: 2px solid #FFD700;
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      animation: fadeIn 4s ease-in;
+      cursor: pointer;
+    }
+
+    a.btn:hover {
+      background-color: #FFD700;
+      color: #000;
+    }
+.logo-svg { 
+	margin-bottom: 20px;
+  }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-container" id="intro">
+  <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: 'Arial', sans-serif; fill: white; }
+    .gold { fill: #FFD700; font-family: 'Pacifico', cursive; }
+  </style>
+
+  <!-- Texte en arc (STUDIO GOLDEN) -->
+  <path id="arc" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
+  <text class="text" font-size="12">
+    <textPath href="#arc" startOffset="50%" text-anchor="middle">STUDIO GOLDEN</textPath>
+  </text>
+
+  <!-- Lettre S -->
+  <text x="90" y="115" class="text" font-size="50" text-anchor="middle">S</text>
+
+  <!-- Lettre G dorée en manuscrit -->
+  <text x="110" y="135" class="gold" font-size="45" text-anchor="middle">G</text>
+</svg>
+    <p>Créativité haut de gamme pour marques ambitieuses</p>
+    <a class="btn" onclick="lancerTransition()">Entrer sur le site</a>
+  </div>
+
+  <script>
+    function lancerTransition() {
+      const intro = document.getElementById('intro');
+      intro.classList.add('slide-left');
+      setTimeout(() => {
+        window.location.href = "portfolio.html";
+      }, 1000); // correspond à la durée de la transition CSS
+    }
+  </script>
 </body>
 </html>
-
-
