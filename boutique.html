@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
+
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -123,86 +124,74 @@
   </style>
 </head>
 <body>
-
-  <!-- Logo -->
-  <img src="G (5).png" alt="Studio Golden" class="logo">
-
-  <!-- Menu -->
-  <nav>
-    <a href="index.html" class="btn">accueil</a> 
-    <a href="portfolio.html" class="btn">portfolio</a>
-    <a href="apropos.html" class="btn">A propos</a>
-    <a href="contact.html" class="btn">Contact</a>
-    <a href="boutique.html" class="btn">Boutique</a>
-    <a href="panier.html" class="btn">TOTAL</a><span id="total">0</span> €
+</head>
+<body>
+  <header>
+    <nav>
+      <button onclick="window.location.href='index.html'">Accueil</button>
+      <button onclick="window.location.href='panier.html'">Panier</button>
+      TOTAL : <span id="total">0 €</span>
     </nav>
+  </header>
 
-  <h1>🛒 Panier</h1>
+  <main>
+    <h1>Nos services</h1>
+    <div class="produits-container">
+      <div class="produit">
+        <h2>Kit Instagram</h2>
+        <p>49 €</p>
+        <button onclick="ajouterAuPanier('Kit Instagram', 49)">Ajouter</button>
+      </div>
 
-   <div class="cards">
-    <div class="card">
-      <h3>Création de sites web</h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>Sites modernes, responsives et optimisés SEO.</p>
-      <p>29 €</p>
-      <button class="btn" onclick="ajouterProduit(29)">Ajouter</button>
+      <div class="produit">
+        <h2>Audit Branding</h2>
+        <p>79 €</p>
+        <button onclick="ajouterAuPanier('Audit Branding', 79)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Pack Logo Premium</h2>
+        <p>99 €</p>
+        <button onclick="ajouterAuPanier('Pack Logo Premium', 99)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Charte Graphique</h2>
+        <p>89 €</p>
+        <button onclick="ajouterAuPanier('Charte Graphique', 89)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Identité Visuelle</h2>
+        <p>120 €</p>
+        <button onclick="ajouterAuPanier('Identité Visuelle', 120)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Template Réseaux Sociaux</h2>
+        <p>39 €</p>
+        <button onclick="ajouterAuPanier('Template Réseaux Sociaux', 39)">Ajouter</button>
+      </div>
     </div>
+  </main>
 
-     <div class="card">
-      <h3>Kit instagram</h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>29€</p>
-      <button class="btn" onclick="ajouterProduit(29)">Ajouter</button>
-    </div>
-
-     <div class="card">
-      <h3>Audit branding</h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>39€</p>
-      <button class="btn" onclick="ajouterProduit(39)">Ajouter</button>
-    </div>
-     
-     <div class="card">
-      <h3>Site vitrine</h3></h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>Site complet pour vous présenter </p>
-      <p>149€</p>
-      <button class="btn" onclick="ajouterProduit(149)">Ajouter</button>
-    </div>
-
-         <div class="card">
-      <h3>Pack Golden Launch </h3></h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>Logo + carte de viste + fllyer + site primaire + visuel réseaux sociaux </p>
-      <p>149€</p>
-      <button class="btn" onclick="ajouterProduit(149)">Ajouter</button>
-    </div>
-
-
-         <div class="card">
-      <h3>Logo pro </h3></h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>Site complet pour vous présenter </p>
-      <p>29€</p>
-      <button class="btn" onclick="ajouterProduit(149)">Ajouter</button>
-    
-  
-   <script>
-    let total = 0;
-
-    function ajouterProduit(prix) {
-      total += prix;
-      document.getElementById("total").textContent = total.toFixed(2);
+  <script>
+    function afficherTotal() {
+      const total = localStorage.getItem('total') || 0;
+      document.getElementById('total').textContent = total + ' €';
     }
+
+    function ajouterAuPanier(nom, prix) {
+      let panier = JSON.parse(localStorage.getItem('panier')) || [];
+      panier.push({ nom: nom, prix: prix });
+      localStorage.setItem('panier', JSON.stringify(panier));
+
+      let total = panier.reduce((somme, item) => somme + item.prix, 0);
+      localStorage.setItem('total', total);
+      afficherTotal();
+    }
+
+    afficherTotal();
   </script>
-     
-     
-     <!-- Footer -->
-  <footer>
-    <p><a href="mentions-legales.html">Mentions légales</a> – © Studio Golden 2025</p>
-  </footer>
- 
 </body>
 </html>
-
-
