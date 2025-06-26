@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Studio Golden</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+
+    /* Logo centré */
+    .logo {
+      display: block;
+      margin: 20px auto 5px;
+      width: 80px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px 0;
+      background-color: #0d0d0d;
+      border-top: 1px solid gold;
+      border-bottom: 1px solid gold;
+    }
+
+    nav a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Titre principal */
+    h2 {
+      text-align: center;
+      color: gold;
+      margin: 40px 0 20px;
+    }
+
+    /* Section des cartes */
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border: 2px solid gold;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px gold;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    .card h3 {
+      color: gold;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      background-color: gold;
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #ffd700;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d0d0d;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid gold;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    footer a {
+      color: gold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+</head>
+<body>
+  <header>
+    <nav>
+      <button onclick="window.location.href='index.html'">Accueil</button>
+      <button onclick="window.location.href='panier.html'">Panier</button>
+      TOTAL : <span id="total">0 €</span>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nos services</h1>
+    <div class="produits-container">
+      <div class="produit">
+        <h2>Kit Instagram</h2>
+        <p>49 €</p>
+        <button onclick="ajouterAuPanier('Kit Instagram', 49)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Audit Branding</h2>
+        <p>79 €</p>
+        <button onclick="ajouterAuPanier('Audit Branding', 79)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Pack Logo Premium</h2>
+        <p>99 €</p>
+        <button onclick="ajouterAuPanier('Pack Logo Premium', 99)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Charte Graphique</h2>
+        <p>89 €</p>
+        <button onclick="ajouterAuPanier('Charte Graphique', 89)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Identité Visuelle</h2>
+        <p>120 €</p>
+        <button onclick="ajouterAuPanier('Identité Visuelle', 120)">Ajouter</button>
+      </div>
+
+      <div class="produit">
+        <h2>Template Réseaux Sociaux</h2>
+        <p>39 €</p>
+        <button onclick="ajouterAuPanier('Template Réseaux Sociaux', 39)">Ajouter</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function afficherTotal() {
+      const total = localStorage.getItem('total') || 0;
+      document.getElementById('total').textContent = total + ' €';
+    }
+
+    function ajouterAuPanier(nom, prix) {
+      let panier = JSON.parse(localStorage.getItem('panier')) || [];
+      panier.push({ nom: nom, prix: prix });
+      localStorage.setItem('panier', JSON.stringify(panier));
+
+      let total = panier.reduce((somme, item) => somme + item.prix, 0);
+      localStorage.setItem('total', total);
+      afficherTotal();
+    }
+
+    afficherTotal();
+  </script>
+</body>
+</html>
