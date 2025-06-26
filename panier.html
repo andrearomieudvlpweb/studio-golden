@@ -145,7 +145,25 @@
       <h3>Panier</h3>
  
     
-      <a href="projet1.html" class="btn">Voir le projet</a>
+     <button onclick="viderPanier()">Vider le panier</button>
+  <script>
+    let panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const liste = document.getElementById('liste-panier');
+    const totalElement = document.getElementById('total');
+    let total = 0;
+    panier.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.nom} — ${item.prix} €`;
+      liste.appendChild(li);
+      total += item.prix;
+    });
+    totalElement.textContent = total.toFixed(2);
+    function viderPanier() {
+      localStorage.removeItem('panier');
+      location.reload();
+    }
+  </script>
+</body>
     </div>
 
 
