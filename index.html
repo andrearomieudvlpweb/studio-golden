@@ -3,110 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <title>Studio GOLDEN - Intro</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Pacifico&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #FFD700;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Arial', sans-serif;
-      overflow: hidden;
-    }
+     body {
+  margin: 0;
+  background: #000;
+  color: #FFD700;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cinzel', serif;
+  overflow: hidden;
+}
 
-    .intro-container {
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-      transition: transform 1s ease-in-out;
-    }
+.intro-container {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
 
-    .slide-left {
-      transform: translateX(-100vw);
-      opacity: 0;
-    }
+.slide-left {
+  transform: translateX(-100vw);
+  opacity: 0;
+}
 
-    h1 {
-      font-size: 3rem;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-      animation: slideDown 1.2s ease;
-    }
+.logo-svg {
+  margin-bottom: 30px;
+}
 
-    h1 span {
-      color: white;
-    }
+p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
+  animation: fadeIn 3s ease-in;
+}
 
-    p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-      animation: fadeIn 3s ease-in;
-    }
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid #FFD700;
+  color: #000;
+  background-color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  animation: fadeIn 4s ease-in;
+  font-family: 'Cinzel', serif;
+  cursor: pointer;
+}
 
-    a.btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 28px;
-      border: 2px solid #FFD700;
-      color: #FFD700;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      animation: fadeIn 4s ease-in;
-      cursor: pointer;
-    }
+.btn:hover {
+  background-color: black;
+  color: #FFD700;
+}
 
-    a.btn:hover {
-      background-color: #FFD700;
-      color: #000;
-    }
-.logo-svg { 
-	margin-bottom: 20px;
-  }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    @keyframes slideDown {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
-</head>
-<body>
   <div class="intro-container" id="intro">
-  <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .text { font-family: 'Arial', sans-serif; fill: white; }
-    .gold { fill: #FFD700; font-family: 'Pacifico', cursive; }
-  </style>
+  <div class="logo-svg">
+    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        .logo-text {
+          font-family: 'Cinzel', serif;
+          fill: white;
+          font-size: 12px;
+          letter-spacing: 2px;
+        }
 
-  <!-- Texte en arc (STUDIO GOLDEN) -->
-  <path id="arc" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
-  <text class="text" font-size="12">
-    <textPath href="#arc" startOffset="50%" text-anchor="middle">STUDIO GOLDEN</textPath>
-  </text>
+        .logo-S {
+          font-family: 'Cinzel', serif;
+          font-size: 50px;
+          fill: white;
+        }
 
-  <!-- Lettre S -->
-  <text x="90" y="115" class="text" font-size="50" text-anchor="middle">S</text>
+        .logo-G {
+          font-family: 'Pacifico', cursive;
+          font-size: 45px;
+          fill: #FFD700;
+        }
+      </style>
 
-  <!-- Lettre G dorée en manuscrit -->
-  <text x="110" y="135" class="gold" font-size="45" text-anchor="middle">G</text>
-</svg>
-    <p>Créativité haut de gamme pour marques ambitieuses</p>
-    <a class="btn" onclick="lancerTransition()">Entrer sur le site</a>
+      <path id="arc" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
+      <text class="logo-text">
+        <textPath href="#arc" startOffset="50%" text-anchor="middle">STUDIO GOLDEN</textPath>
+      </text>
+      <text x="90" y="115" class="logo-S">S</text>
+      <text x="115" y="135" class="logo-G">G</text>
+    </svg>
   </div>
 
+  <p>Créativité haut de gamme pour marques ambitieuses</p>
+  <a class="btn" onclick="lancerTransition()">Entrer sur le site</a>
+</div>
+
+
   <script>
-    function lancerTransition() {
-      const intro = document.getElementById('intro');
-      intro.classList.add('slide-left');
-      setTimeout(() => {
-        window.location.href = "portfolio.html";
-      }, 1000); // correspond à la durée de la transition CSS
-    }
-  </script>
+  function lancerTransition() {
+    const intro = document.getElementById('intro');
+    intro.classList.add('slide-left');
+    setTimeout(() => {
+      window.location.href = "portfolio.html";
+    }, 1000); // Durée de la transition
+  }
+</script>
+
+
+
 </body>
 </html>
