@@ -3,111 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <title>Studio GOLDEN - Intro</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts : Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
   <style>
-     body {
-  margin: 0;
-  background: #000;
-  color: #FFD700;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Cinzel', serif;
-  overflow: hidden;
-}
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #FFD700;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Playfair Display', serif;
+      overflow: hidden;
+    }
 
-.intro-container {
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
-  transition: transform 1s ease-in-out;
-}
+    .intro-container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      transition: transform 1s ease-in-out;
+      z-index: 1;
+      position: relative;
+    }
 
-.slide-left {
-  transform: translateX(-100vw);
-  opacity: 0;
-}
+    .slide-left {
+      transform: translateX(-100vw);
+      opacity: 0;
+    }
 
-.logo-svg {
-  margin-bottom: 30px;
-}
+    .logo-img {
+      width: 160px;
+      height: auto;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-p {
-  font-size: 1.2rem;
-  opacity: 0.85;
-  margin-bottom: 30px;
-  animation: fadeIn 3s ease-in;
-}
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeIn 3s ease-in;
+      opacity: 0.85;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  border: 2px solid #FFD700;
-  color: #000;
-  background-color: #FFD700;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  animation: fadeIn 4s ease-in;
-  font-family: 'Cinzel', serif;
-  cursor: pointer;
-}
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      border: 2px solid #FFD700;
+      color: black;
+      background-color: #FFD700;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      font-family: 'Playfair Display', serif;
+      animation: fadeIn 4s ease-in;
+      cursor: pointer;
+    }
 
-.btn:hover {
-  background-color: black;
-  color: #FFD700;
-}
+    .btn:hover {
+      background-color: black;
+      color: #FFD700;
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+    .transition-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s ease;
+      z-index: 5;
+    }
 
+    .transition-overlay.active {
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Fond noir semi-transparent pour la transition -->
+  <div class="transition-overlay" id="overlay"></div>
+
+  <!-- Contenu de l’intro -->
   <div class="intro-container" id="intro">
-  <div class="logo-svg">
-    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <style>
-        .logo-text {
-          font-family: 'Cinzel', serif;
-          fill: white;
-          font-size: 12px;
-          letter-spacing: 2px;
-        }
-
-        .logo-S {
-          font-family: 'Playfair display', serif;
-          font-size: 50px;
-          fill: white;
-        }
-
-        .logo-G {
-          font-family: 'Playfair display', cursive;
-          font-size: 45px;
-          fill: #FFD700;
-        }
-      </style>
-
-      <path id="arc" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
-      <text class="logo-text">
-        <textPath href="#arc" startOffset="50%" text-anchor="middle">STUDIO GOLDEN</textPath>
-      </text>
-      <text x="90" y="115" class="logo-S">S</text>
-      <text x="115" y="135" class="logo-G">G</text>
-    </svg>
+    <img src="ton-logo.png" alt="Logo Studio GOLDEN" class="logo-img">
+    <p>Créativité haut de gamme pour marques ambitieuses</p>
+    <a class="btn" onclick="lancerTransition()">Entrer sur le site</a>
   </div>
 
-  <p>Créativité haut de gamme pour marques ambitieuses</p>
-  <a class="btn" onclick="lancerTransition()">Entrer sur le site</a>
-</div>
-
   <script>
-  function lancerTransition() {
-    const intro = document.getElementById('intro');
-    intro.classList.add('slide-left');
-    setTimeout(() => {
-      window.location.href = "portfolio.html";
-    }, 1000); // Durée de la transition
-  }
-</script>
+    function lancerTransition() {
+      const intro = document.getElementById('intro');
+      const overlay = document.getElementById('overlay');
+
+      overlay.classList.add('active');
+      intro.classList.add('slide-left');
+
+      setTimeout(() => {
+        window.location.href = "portfolio.html";
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
