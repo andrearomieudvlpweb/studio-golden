@@ -2,226 +2,83 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio - Studio Golden</title>
+  <title>Panier simple</title>
   <style>
     body {
-      margin: 0;
+      background-color: #000;
+      color: gold;
       font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-    }
-
-    /* Logo centré */
-    .logo {
-      display: block;
-      margin: 20px auto 5px;
-      width: 80px;
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 10px 0;
-      background-color: #0d0d0d;
-      border-top: 1px solid gold;
-      border-bottom: 1px solid gold;
-    }
-
-    nav a {
-      color: gold;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Titre principal */
-    h2 {
+      padding: 2rem;
       text-align: center;
-      color: gold;
-      margin: 40px 0 20px;
     }
 
-    /* Section des cartes */
-    .cards {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      padding: 0 20px 60px;
-    }
-
-    .card {
-      background-color: #1a1a1a;
-      border: 2px solid gold;
-      border-radius: 10px;
-      width: 300px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px gold;
-    }
-
-    .card img {
-      width: 100%;
+    .produit {
+      background-color: #111;
+      margin: 1rem auto;
+      padding: 1rem;
       border-radius: 8px;
-      margin: 15px 0;
-    }
-
-    .card h3 {
-      color: gold;
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 0.95em;
-      margin-bottom: 15px;
+      width: 80%;
+      box-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
     }
 
     .btn {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
       background-color: gold;
       color: black;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 6px;
       font-weight: bold;
-      display: inline-block;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
     .btn:hover {
-      background-color: #ffd700;
+      background-color: #e6c200;
     }
 
-    /* Footer */
-    footer {
-      background-color: #0d0d0d;
-      text-align: center;
-      padding: 20px;
+    .total {
+      margin-top: 2rem;
+      font-size: 1.5rem;
       border-top: 1px solid gold;
-      font-size: 0.9em;
-      color: #ccc;
-    }
-
-    footer a {
-      color: gold;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      padding-top: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo -->
-  <img src="G (5).png" alt="Studio Golden" class="logo">
+  <h1>🛒 Panier</h1>
 
-  <!-- Menu -->
-  <nav>
-    <a href="index.html" class="btn">accueil</a> 
-    <a href="portfolio.html" class="btn">portfolio</a>
-    <a href="apropos.html" class="btn">A propos</a>
-    <a href="contact.html" class="btn">Contact</a>
-    <a href="boutique.html" class="btn">Boutique</a>
-     <a href="panier.html" class="btn">Panier</a>
-  </nav>
-
-  <!-- Titre -->
-  <h2>Mes services</h2>
-
-  <!-- Cartes -->
-  <div class="cards">
-    <div class="card">
-      <h3>Site vitrine</h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>Site complet pour vous présenter </p>
-      <p>149€</p>
-      <button class=”ajouter” data-nom=”Site vitrine” data-prix=”149” >Ajouter</button>
-    </div>
-
-    
-     <div class="card">
-      <h3>Kit instagram</h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>10 Visuels cohérents et pros </p>
-      <p>29€</p>
-      <button class=”ajouter” data-nom="Kit instragram” data-prix=”29” >Ajouter</button>
-      </div>
-
-     <div class="card">
-       <h3>Identité visuelle</h3>
-       <img src="mockup1.png" alt="Mockup site web">
-       <p>Logo+typo+palette </p>
-       <p>69€</p>
-       <button class=”ajouter” data-nom="Kit instragram” data-prix=”29” >Ajouter</button>
-       </div>
-
-
-         
-      <div class="card">
-       <h3>Audit Branding </h3>
-      <img src="mockup1.png" alt="Mockup site web">
-      <p>Analyse de votre image </p>
-      <p>39€</p>
-     <button class=”ajouter” data-nom=”Audit Branding” data-prix=”39” >Ajouter</button>
-    </div>
-
-
-         
-    <div class="card">
-      <h3>Refonte site</h3>
-      <img src="mockup2.png" alt="Mockup app web">
-      <p>Modernisation de votre </p>
-      <p>99€</p>
-      <button class=”ajouter” data-nom=”Refonte site” data-prix=”99” >Ajouter</button>
-      </div>
-
-    <div class="card">
-      <h3>Logo pro</h3>
-      <img src="mockup3.png" alt="Mockup refonte">
-      <p>Création d’un logo sur mesure</p>
-      <p>49€</p>
-      <button class="btn" onclick="ajouterProduit(29)" data-nom=”Logo Pro” data-prix=”49”>Ajouter</button>
-   <div class="produit">
-
-    
+  <div class="produit">
+    <p>Logo Pro — 49 €</p>
+    <button class="btn" onclick="ajouterProduit(49)">Ajouter</button>
   </div>
 
+  <div class="produit">
+    <p>Identité Visuelle — 69 €</p>
+    <button class="btn" onclick="ajouterProduit(69)">Ajouter</button>
+  </div>
 
-   <a href="panier.html">Voir mon panier</a>
+  <div class="produit">
+    <p>Kit Instagram — 29 €</p>
+    <button class="btn" onclick="ajouterProduit(29)">Ajouter</button>
+  </div>
+
+  <div class="total">
+    Total : <span id="total">0</span> €
+  </div>
 
   <script>
-    const boutons = document.querySelectorAll('.ajouter');
+    let total = 0;
 
-    boutons.forEach(bouton => {
-      bouton.addEventListener('click', () => {
-        const nom = bouton.getAttribute('data-nom');
-        const prix = parseFloat(bouton.getAttribute('data-prix'));
-
-        let panier = JSON.parse(localStorage.getItem('panier')) || [];
-        panier.push({ nom, prix });
-        localStorage.setItem('panier', JSON.stringify(panier));
-
-        alert(`${nom} ajouté au panier`);
-      });
-    });
+    function ajouterProduit(prix) {
+      total += prix;
+      document.getElementById("total").textContent = total.toFixed(2);
+    }
   </script>
+
 </body>
 </html>
 
-  <!-- Footer -->
-  <footer>
-    <p><a href="mentions-legales.html">Mentions légales</a> – © Studio Golden 2025</p>
-  </footer>
-<!-- Fin de ton HTML boutique.html -->
+
+<button class=”ajouter” data-nom=”Logo Pro” data-prix=”49” >Ajouter</button>
+
